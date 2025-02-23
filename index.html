@@ -8,7 +8,7 @@
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding-top: 60px; 
+            padding-top: 60px;
             background-color: #f4f4f4;
             scroll-behavior: smooth;
         }
@@ -80,6 +80,10 @@
         @media (max-width: 768px) {
             .menu-icon {
                 display: block;
+                position: absolute;
+                top: 15px;
+                right: 20px;
+                color: white;
             }
             
             nav ul {
@@ -91,6 +95,7 @@
                 top: 60px;
                 left: 0;
                 text-align: center;
+                padding: 10px 0;
             }
             
             nav ul.show {
@@ -119,11 +124,11 @@
         <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
         <nav>
             <ul id="menu-list">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#offers">Offers</a></li>
-                <li><a href="#booking">Booking</a></li>
-                <li><a href="#location">Location</a></li>
+                <li><a href="#home" onclick="closeMenu()">Home</a></li>
+                <li><a href="#about" onclick="closeMenu()">About</a></li>
+                <li><a href="#offers" onclick="closeMenu()">Offers</a></li>
+                <li><a href="#booking" onclick="closeMenu()">Booking</a></li>
+                <li><a href="#location" onclick="closeMenu()">Location</a></li>
             </ul>
         </nav>
     </header>
@@ -136,12 +141,15 @@
         <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
     </section>
     <section id="location">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.952296068207!2d80.19407249999999!3d12.974903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d8c4cef8e9f%3A0x79ce97b65a967b11!2sGROOMING%20%26%20GLOWING!5e0!3m2!1sen!2sin!4v1740062186098!5m2!1sen!2sin" allowfullscreen loading="lazy"></iframe>
+        <iframe src="https://www.google.com/maps/embed?..." allowfullscreen loading="lazy"></iframe>
     </section>
 
     <script>
         function toggleMenu() {
             document.getElementById("menu-list").classList.toggle("show");
+        }
+        function closeMenu() {
+            document.getElementById("menu-list").classList.remove("show");
         }
     </script>
 </body>
